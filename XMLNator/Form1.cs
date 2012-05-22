@@ -65,6 +65,8 @@ namespace XMLNator
                 sw.WriteLine("General: "+"\n");
                 sw.WriteLine("Código Producto: " + txtCodigoProducto.Text + "     Nombre Producto: " + txtNombreProducto.Text + "     Código Poliza: " + txtCodigoPoliza.Text);
                 sw.WriteLine("Número Poliza: " + txtNumeroPoliza.Text + "     Vigencia Inicial: " + txtVigenciaInicial.Text + "     VigenciaFinal: " + txtVigenciaFinal.Text);
+                sw.WriteLine("\n\n");
+                sw.WriteLine("Detalles Contratante/Asegurado");
                 sw.Close();
                 //Fin de formateado y Guardado de datos
             }

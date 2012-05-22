@@ -104,8 +104,8 @@ namespace XMLNator
             // 
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.ForeColor = System.Drawing.Color.Teal;
-            this.btnCerrar.Location = new System.Drawing.Point(674, 3);
+            this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCerrar.Location = new System.Drawing.Point(683, 0);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(75, 33);
             this.btnCerrar.TabIndex = 0;
@@ -129,7 +129,7 @@ namespace XMLNator
             // 
             // lineShape4
             // 
-            this.lineShape4.BorderColor = System.Drawing.Color.Teal;
+            this.lineShape4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lineShape4.BorderWidth = 3;
             this.lineShape4.Name = "lineShape4";
             this.lineShape4.X1 = 758;
@@ -139,7 +139,7 @@ namespace XMLNator
             // 
             // lineShape3
             // 
-            this.lineShape3.BorderColor = System.Drawing.Color.Teal;
+            this.lineShape3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lineShape3.BorderWidth = 3;
             this.lineShape3.Name = "lineShape3";
             this.lineShape3.X1 = 2;
@@ -149,7 +149,7 @@ namespace XMLNator
             // 
             // lineShape2
             // 
-            this.lineShape2.BorderColor = System.Drawing.Color.Teal;
+            this.lineShape2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lineShape2.BorderWidth = 3;
             this.lineShape2.Name = "lineShape2";
             this.lineShape2.X1 = -4;
@@ -159,7 +159,7 @@ namespace XMLNator
             // 
             // lineShape1
             // 
-            this.lineShape1.BorderColor = System.Drawing.Color.Teal;
+            this.lineShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lineShape1.BorderWidth = 3;
             this.lineShape1.Name = "lineShape1";
             this.lineShape1.X1 = 0;
@@ -171,7 +171,7 @@ namespace XMLNator
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Teal;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(317, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 31);
@@ -237,15 +237,14 @@ namespace XMLNator
             // 
             // btnGuardarTextoBase
             // 
-            this.btnGuardarTextoBase.BackColor = System.Drawing.Color.Gray;
             this.btnGuardarTextoBase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarTextoBase.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarTextoBase.ForeColor = System.Drawing.Color.Red;
             this.btnGuardarTextoBase.Location = new System.Drawing.Point(459, 107);
             this.btnGuardarTextoBase.Name = "btnGuardarTextoBase";
             this.btnGuardarTextoBase.Size = new System.Drawing.Size(202, 23);
             this.btnGuardarTextoBase.TabIndex = 32;
             this.btnGuardarTextoBase.Text = "Guardar Texto Base";
-            this.btnGuardarTextoBase.UseVisualStyleBackColor = false;
+            this.btnGuardarTextoBase.UseVisualStyleBackColor = true;
             this.btnGuardarTextoBase.Click += new System.EventHandler(this.btnGuardarTextoBase_Click);
             // 
             // txtCobertura3
@@ -587,6 +586,7 @@ namespace XMLNator
             this.txtCodigoPoliza.Name = "txtCodigoPoliza";
             this.txtCodigoPoliza.Size = new System.Drawing.Size(100, 20);
             this.txtCodigoPoliza.TabIndex = 3;
+            
             // 
             // label7
             // 
@@ -709,7 +709,7 @@ namespace XMLNator
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(761, 428);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label1);

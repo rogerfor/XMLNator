@@ -59,15 +59,14 @@ namespace XMLNator
             saveFileDialog1.Title = "Nombre para el archivo";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-
+                //Formateado y Guardado de datos
                 DateTime fecha = DateTime.Now;
                 StreamWriter sw = new StreamWriter(saveFileDialog1.FileName);
-                sw.WriteLine(fecha + "\r\nBuscar Caracter: \r\n" + "El caracter a buscar: " + Convert.ToString('"') + Convert.ToString(txtCodigoPoliza.Text + "\n") + Convert.ToString('"'));
-                sw.WriteLine("Resultado: \r\n" + Convert.ToString(txtCodigoProducto.Text));
-                sw.WriteLine("Buscador de delimitadores y tokens\n");
-                sw.WriteLine("Resultado: \r\n" + Convert.ToString(txtNombreProducto.Text));
-                sw.WriteLine("------------------------------------------------");
+                sw.WriteLine("General: "+"\n");
+                sw.WriteLine("Código Producto: " + txtCodigoProducto.Text + "     Nombre Producto: " + txtNombreProducto.Text + "     Código Poliza: " + txtCodigoPoliza.Text);
+                sw.WriteLine("Número Poliza: " + txtNumeroPoliza.Text + "     Vigencia Inicial: " + txtVigenciaInicial.Text + "     VigenciaFinal: " + txtVigenciaFinal.Text);
                 sw.Close();
+                //Fin de formateado y Guardado de datos
             }
 
         }

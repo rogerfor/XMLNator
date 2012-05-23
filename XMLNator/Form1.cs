@@ -54,25 +54,31 @@ namespace XMLNator
 
         private void btnGuardarTextoBase_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.Filter = "Archivos de texto (*.txt)|*.txt";
-            saveFileDialog1.RestoreDirectory = true;
-            saveFileDialog1.Title = "Nombre para el archivo";
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                //Formateado y Guardado de datos
-                DateTime fecha = DateTime.Now;
-                StreamWriter sw = new StreamWriter(saveFileDialog1.FileName);
-                sw.WriteLine("General: "+"\n");
-                sw.WriteLine("Código Producto: " + txtCodigoProducto.Text + "     Nombre Producto: " + txtNombreProducto.Text + "     Código Poliza: " + txtCodigoPoliza.Text);
-                sw.WriteLine("Número Poliza: " + txtNumeroPoliza.Text + "     Vigencia Inicial: " + txtVigenciaInicial.Text + "     VigenciaFinal: " + txtVigenciaFinal.Text);
+
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "Archivos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*";
+            saveFileDialog1.Title = "Guardar Archivo";
+            saveFileDialog1.ShowDialog();
+
+            if(saveFileDialog1.FileName != "")
+   {
+      
+      StreamWriter sw = new StreamWriter(saveFileDialog1.OpenFile());
+                sw.WriteLine("General: " + "\n");
+                sw.WriteLine("Código Producto: " + txtCodigoProducto.Text + "     Nombre Producto: " +
+                             txtNombreProducto.Text + "     Código Poliza: " + txtCodigoPoliza.Text);
+                sw.WriteLine("Número Poliza: " + txtNumeroPoliza.Text + "     Vigencia Inicial: " +
+                             txtVigenciaInicial.Text + "     VigenciaFinal: " + txtVigenciaFinal.Text);
                 sw.WriteLine("\n\n");
-                sw.WriteLine("Detalles Contratante/Asegurado");
+                sw.WriteLine("Detalles Contratante/Asegurado:");
                 sw.Close();
-                //Fin de formateado y Guardado de datos
-            }
+   }
+}
+
+
+          
 
         }
 
         
     }
-}

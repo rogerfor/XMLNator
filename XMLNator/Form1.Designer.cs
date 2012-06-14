@@ -30,14 +30,19 @@ namespace XMLNator
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.label25 = new System.Windows.Forms.Label();
+            this.guardarXmlTexto = new System.Windows.Forms.SaveFileDialog();
+            this.abrirXML = new System.Windows.Forms.OpenFileDialog();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnGenerarTxt = new System.Windows.Forms.Button();
+            this.btnAbrirXml = new System.Windows.Forms.Button();
+            this.txtRutaTXT = new System.Windows.Forms.TextBox();
+            this.txtRutaXML = new System.Windows.Forms.TextBox();
+            this.lblEstadoArchivo = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnGuardarTextoBase = new System.Windows.Forms.Button();
@@ -89,87 +94,39 @@ namespace XMLNator
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.tabControl1.SuspendLayout();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.btnAyuda = new System.Windows.Forms.Button();
+            this.btnAcercaDe = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tabPage3.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCerrar
             // 
+            this.btnCerrar.AccessibleDescription = "Sale del Programa";
+            this.btnCerrar.AccessibleName = "Salir";
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnCerrar.Location = new System.Drawing.Point(683, 0);
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Location = new System.Drawing.Point(730, 0);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(75, 33);
+            this.btnCerrar.Size = new System.Drawing.Size(31, 31);
             this.btnCerrar.TabIndex = 0;
-            this.btnCerrar.Text = "Salir";
-            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Text = "X";
+            this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.BtnCerrarClick1);
-            // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape4,
-            this.lineShape3,
-            this.lineShape2,
-            this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(761, 428);
-            this.shapeContainer1.TabIndex = 1;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // lineShape4
-            // 
-            this.lineShape4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lineShape4.BorderWidth = 3;
-            this.lineShape4.Name = "lineShape4";
-            this.lineShape4.X1 = 758;
-            this.lineShape4.X2 = 758;
-            this.lineShape4.Y1 = 524;
-            this.lineShape4.Y2 = -2;
-            // 
-            // lineShape3
-            // 
-            this.lineShape3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lineShape3.BorderWidth = 3;
-            this.lineShape3.Name = "lineShape3";
-            this.lineShape3.X1 = 2;
-            this.lineShape3.X2 = 2;
-            this.lineShape3.Y1 = -1;
-            this.lineShape3.Y2 = 533;
-            // 
-            // lineShape2
-            // 
-            this.lineShape2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lineShape2.BorderWidth = 3;
-            this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = -4;
-            this.lineShape2.X2 = 768;
-            this.lineShape2.Y1 = 426;
-            this.lineShape2.Y2 = 426;
-            // 
-            // lineShape1
-            // 
-            this.lineShape1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lineShape1.BorderWidth = 3;
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 0;
-            this.lineShape1.X2 = 762;
-            this.lineShape1.Y1 = 1;
-            this.lineShape1.Y2 = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(317, 9);
@@ -178,17 +135,101 @@ namespace XMLNator
             this.label1.TabIndex = 2;
             this.label1.Text = "XmlNator";
             // 
-            // tabControl1
+            // label25
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(19, 26);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(722, 376);
-            this.tabControl1.TabIndex = 3;
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label25.Location = new System.Drawing.Point(502, 406);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(235, 13);
+            this.label25.TabIndex = 4;
+            this.label25.Text = "Derechos Reservados 2do. Grupo Compiladores";
+            // 
+            // guardarXmlTexto
+            // 
+            this.guardarXmlTexto.Filter = "\"Archivos de Texto|*.txt\"";
+            // 
+            // abrirXML
+            // 
+            this.abrirXML.Filter = "Archivos XML (*.xml) | *.XML| todos los archivos (*.*)|*.*";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.btnGenerarTxt);
+            this.tabPage3.Controls.Add(this.btnAbrirXml);
+            this.tabPage3.Controls.Add(this.txtRutaTXT);
+            this.tabPage3.Controls.Add(this.txtRutaXML);
+            this.tabPage3.Controls.Add(this.lblEstadoArchivo);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(714, 350);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Xml a Texto";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btnGenerarTxt
+            // 
+            this.btnGenerarTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnGenerarTxt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarTxt.ForeColor = System.Drawing.Color.White;
+            this.btnGenerarTxt.Location = new System.Drawing.Point(241, 257);
+            this.btnGenerarTxt.Name = "btnGenerarTxt";
+            this.btnGenerarTxt.Size = new System.Drawing.Size(232, 53);
+            this.btnGenerarTxt.TabIndex = 4;
+            this.btnGenerarTxt.Text = "Generar Archivo TXT";
+            this.btnGenerarTxt.UseVisualStyleBackColor = false;
+            // 
+            // btnAbrirXml
+            // 
+            this.btnAbrirXml.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAbrirXml.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbrirXml.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbrirXml.ForeColor = System.Drawing.Color.White;
+            this.btnAbrirXml.Location = new System.Drawing.Point(241, 142);
+            this.btnAbrirXml.Name = "btnAbrirXml";
+            this.btnAbrirXml.Size = new System.Drawing.Size(232, 53);
+            this.btnAbrirXml.TabIndex = 3;
+            this.btnAbrirXml.Text = "Abrir Archivo XML";
+            this.btnAbrirXml.UseVisualStyleBackColor = false;
+            this.btnAbrirXml.Click += new System.EventHandler(this.btnAbrirXml_Click);
+            // 
+            // txtRutaTXT
+            // 
+            this.txtRutaTXT.Location = new System.Drawing.Point(44, 220);
+            this.txtRutaTXT.Name = "txtRutaTXT";
+            this.txtRutaTXT.Size = new System.Drawing.Size(627, 20);
+            this.txtRutaTXT.TabIndex = 2;
+            // 
+            // txtRutaXML
+            // 
+            this.txtRutaXML.Location = new System.Drawing.Point(44, 116);
+            this.txtRutaXML.Name = "txtRutaXML";
+            this.txtRutaXML.Size = new System.Drawing.Size(627, 20);
+            this.txtRutaXML.TabIndex = 1;
+            // 
+            // lblEstadoArchivo
+            // 
+            this.lblEstadoArchivo.AutoSize = true;
+            this.lblEstadoArchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoArchivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblEstadoArchivo.Location = new System.Drawing.Point(176, 27);
+            this.lblEstadoArchivo.Name = "lblEstadoArchivo";
+            this.lblEstadoArchivo.Size = new System.Drawing.Size(362, 42);
+            this.lblEstadoArchivo.TabIndex = 0;
+            this.lblEstadoArchivo.Text = "Elija un Archivo XML";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(714, 350);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Texto a Xml";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage1
             // 
@@ -245,7 +286,6 @@ namespace XMLNator
             this.btnGuardarTextoBase.TabIndex = 32;
             this.btnGuardarTextoBase.Text = "Guardar Texto Base";
             this.btnGuardarTextoBase.UseVisualStyleBackColor = true;
-            this.btnGuardarTextoBase.Click += new System.EventHandler(this.btnGuardarTextoBase_Click);
             // 
             // txtCobertura3
             // 
@@ -586,7 +626,6 @@ namespace XMLNator
             this.txtCodigoPoliza.Name = "txtCodigoPoliza";
             this.txtCodigoPoliza.Size = new System.Drawing.Size(100, 20);
             this.txtCodigoPoliza.TabIndex = 3;
-            
             // 
             // label7
             // 
@@ -670,56 +709,90 @@ namespace XMLNator
             this.txtNombreProducto.Size = new System.Drawing.Size(100, 20);
             this.txtNombreProducto.TabIndex = 2;
             // 
-            // tabPage2
+            // tabControl1
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(714, 350);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Texto a Xml";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(19, 26);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(722, 376);
+            this.tabControl1.TabIndex = 30;
+            this.tabControl1.TabStop = false;
             // 
-            // tabPage3
+            // btnAyuda
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(714, 350);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Xml a Texto";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.btnAyuda.AccessibleDescription = "Muestra la ayuda del Programa";
+            this.btnAyuda.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAyuda.ForeColor = System.Drawing.Color.White;
+            this.btnAyuda.Location = new System.Drawing.Point(668, 0);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(31, 31);
+            this.btnAyuda.TabIndex = 31;
+            this.btnAyuda.Text = "?";
+            this.btnAyuda.UseVisualStyleBackColor = false;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
-            // tabPage4
+            // btnAcercaDe
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(714, 350);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Ayuda";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.btnAcercaDe.AccessibleDescription = "Muestra la ayuda del Programa";
+            this.btnAcercaDe.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btnAcercaDe.FlatAppearance.BorderSize = 0;
+            this.btnAcercaDe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcercaDe.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcercaDe.ForeColor = System.Drawing.Color.White;
+            this.btnAcercaDe.Location = new System.Drawing.Point(637, 0);
+            this.btnAcercaDe.Name = "btnAcercaDe";
+            this.btnAcercaDe.Size = new System.Drawing.Size(31, 31);
+            this.btnAcercaDe.TabIndex = 32;
+            this.btnAcercaDe.Text = "!";
+            this.btnAcercaDe.UseVisualStyleBackColor = false;
+            this.btnAcercaDe.Click += new System.EventHandler(this.btnAcercaDe_Click);
             // 
-            // saveFileDialog1
+            // button1
             // 
-            this.saveFileDialog1.CheckFileExists = true;
+            this.button1.AccessibleDescription = "Muestra la ayuda del Programa";
+            this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(699, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 31);
+            this.button1.TabIndex = 33;
+            this.button1.Text = "_";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(761, 428);
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(760, 425);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAcercaDe);
+            this.Controls.Add(this.btnAyuda);
+            this.Controls.Add(this.label25);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.shapeContainer1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "<name>XmlNator</name>";
-            this.tabControl1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -727,6 +800,7 @@ namespace XMLNator
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -735,42 +809,20 @@ namespace XMLNator
         #endregion
 
         private Button btnCerrar;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape4;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private Label label1;
-        private TabControl tabControl1;
-        private TabPage tabPage1;
+        private Label label25;
+        private SaveFileDialog guardarXmlTexto;
+        private OpenFileDialog abrirXML;
+        private TabPage tabPage3;
+        private Button btnGenerarTxt;
+        private Button btnAbrirXml;
+        private TextBox txtRutaTXT;
+        private TextBox txtRutaXML;
+        public Label lblEstadoArchivo;
         private TabPage tabPage2;
-        private TextBox txtCodigoPoliza;
-        private Label label3;
-        private TextBox txtCodigoProducto;
-        private Label label2;
-        private TextBox txtVigenciaFinal;
-        private Label label7;
-        private TextBox txtVigenciaInicial;
-        private Label label6;
-        private TextBox txtNumeroPoliza;
-        private Label label5;
-        private TextBox txtNombreProducto;
-        private Label label4;
-        private GroupBox groupBox1;
-        private GroupBox groupBox2;
-        private Label label8;
-        private TextBox txtApellidoAsegurado;
-        private Label label13;
-        private TextBox txtAsuguradoNombre;
-        private Label label12;
-        private TextBox txtDireccionCobro;
-        private Label label11;
-        private TextBox txtContratanteDireccion;
-        private Label label10;
-        private TextBox txtContratanteNit;
-        private Label label9;
-        private TextBox txtContratanteNombre;
+        private TabPage tabPage1;
         private GroupBox groupBox4;
+        private Button btnGuardarTextoBase;
         private TextBox txtCobertura3;
         private Label label24;
         private TextBox txtCobertura2;
@@ -793,10 +845,36 @@ namespace XMLNator
         private Label label16;
         private Label label15;
         private Label label14;
-        private Button btnGuardarTextoBase;
-        private TabPage tabPage3;
-        private TabPage tabPage4;
-        private SaveFileDialog saveFileDialog1;
+        private GroupBox groupBox2;
+        private TextBox txtAsuguradoNombre;
+        private TextBox txtApellidoAsegurado;
+        private Label label12;
+        private TextBox txtDireccionCobro;
+        private Label label13;
+        private Label label11;
+        private TextBox txtContratanteDireccion;
+        private Label label10;
+        private TextBox txtContratanteNit;
+        private Label label9;
+        private TextBox txtContratanteNombre;
+        private Label label8;
+        private GroupBox groupBox1;
+        private TextBox txtVigenciaFinal;
+        private TextBox txtCodigoPoliza;
+        private Label label7;
+        private Label label2;
+        private TextBox txtVigenciaInicial;
+        private TextBox txtCodigoProducto;
+        private Label label6;
+        private Label label3;
+        private TextBox txtNumeroPoliza;
+        private Label label4;
+        private Label label5;
+        private TextBox txtNombreProducto;
+        private TabControl tabControl1;
+        private Button btnAyuda;
+        private Button btnAcercaDe;
+        private Button button1;
 
     }
 }

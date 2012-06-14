@@ -1,7 +1,10 @@
 ﻿using System;
-using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using System.Reflection;
+using System.IO;
+using System.Xml;
+using System.Xml.Schema;
 
 namespace XMLNator
 {
@@ -14,8 +17,7 @@ namespace XMLNator
             MouseMove += Form1MouseMove;
         }
 
-
-
+        
         #region Funciones necesarias para mover la ventana sin barra de titulo
 
         //
@@ -52,33 +54,38 @@ namespace XMLNator
 
         #endregion
 
-        private void btnGuardarTextoBase_Click(object sender, EventArgs e)
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "Archivos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*";
-            saveFileDialog1.Title = "Guardar Archivo";
-            saveFileDialog1.ShowDialog();
-
-            if(saveFileDialog1.FileName != "")
-   {
-      
-      StreamWriter sw = new StreamWriter(saveFileDialog1.OpenFile());
-                sw.WriteLine("General: " + "\n");
-                sw.WriteLine("Código Producto: " + txtCodigoProducto.Text + "     Nombre Producto: " +
-                             txtNombreProducto.Text + "     Código Poliza: " + txtCodigoPoliza.Text);
-                sw.WriteLine("Número Poliza: " + txtNumeroPoliza.Text + "     Vigencia Inicial: " +
-                             txtVigenciaInicial.Text + "     VigenciaFinal: " + txtVigenciaFinal.Text);
-                sw.WriteLine("\n\n");
-                sw.WriteLine("Detalles Contratante/Asegurado:");
-                sw.Close();
-   }
-}
-
-
-          
 
         }
 
-        
+        private void btnAbrirXml_Click(object sender, EventArgs e)
+        {
+            abrirXML.InitialDirectory = Directory.GetCurrentDirectory();
+            abrirXML.Title = "Seleccione un archivo";
+            if (abrirXML.ShowDialog() == DialogResult.OK)
+            {
+                var strFileName = abrirXML.FileName;
+                txtRutaXML.Text = strFileName;
+                ConvertirXmlEnTexo.ValidarXml(strFileName);
+            }
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            DialogResult show = MessageBox.Show("XmlNator v 1.0\r\nProyecto Final del curso Compiladores\r\nConvierte Texto Plano a XML y Viceversa\r\nEnjoy it ;)"
+                                            , caption: "XmlNator", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.Information);
+        }
+
+        private void btnAcercaDe_Click(object sender, EventArgs e)
+        {
+            DialogResult show = MessageBox.Show("XmlNator v 1.0\r\nDesarrollado por:\r\nGenerar documentos de texto: Pedro Alonso\r\nValidar documentos txt            : Roger Olavarrueth\r\nConversion txt a xml                 : Roger Olavarrueth\r\nValidar archivos xml                  : Jose Sosa\r\nConvertir xml a txt                     : Jose Sosa\r\nRevision                                      : Jose Sosa\r\n" 
+                                            , caption: "Acerca de", buttons: MessageBoxButtons.OK, icon: MessageBoxIcon.None);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
+}

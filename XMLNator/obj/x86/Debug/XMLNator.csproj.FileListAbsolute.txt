@@ -1,0 +1,11 @@
+c:\users\jose\documents\visual studio 2010\Projects\XMLNator\XMLNator\bin\Debug\XMLNator.exe
+c:\users\jose\documents\visual studio 2010\Projects\XMLNator\XMLNator\bin\Debug\XMLNator.pdb
+c:\users\jose\documents\visual studio 2010\Projects\XMLNator\XMLNator\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\jose\documents\visual studio 2010\Projects\XMLNator\XMLNator\obj\x86\Debug\XMLNator.Form1.resources
+c:\users\jose\documents\visual studio 2010\Projects\XMLNator\XMLNator\obj\x86\Debug\XMLNator.Properties.Resources.resources
+c:\users\jose\documents\visual studio 2010\Projects\XMLNator\XMLNator\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\jose\documents\visual studio 2010\Projects\XMLNator\XMLNator\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\jose\documents\visual studio 2010\Projects\XMLNator\XMLNator\obj\x86\Debug\XMLNator.exe
+c:\users\jose\documents\visual studio 2010\Projects\XMLNator\XMLNator\obj\x86\Debug\XMLNator.pdb
+C:\Users\Familia\Documents\GitHub\XMLNator\XMLNator\obj\x86\Debug\XMLNator.exe
+C:\Users\Familia\Documents\GitHub\XMLNator\XMLNator\obj\x86\Debug\XMLNator.pdb
